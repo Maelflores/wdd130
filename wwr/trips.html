@@ -1,96 +1,118 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore exciting white water rafting trips with Wild River Rafting. Find an adventure for your next river experience.">
+    <meta name="description" content="Compare Wild River Rafting trip options and choose an outdoor river adventure.">
     <meta name="author" content="JOSE ISMAEL FLORES VILLEGAS">
     <title>Trips | Wild River Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
-
 <body>
-
     <header>
-        <img src="images/z-wwr-blue.jpg" alt="Wild River Rafting logo">
-
-        <nav>
+        <a class="logo-link" href="index.html">
+            <img src="images/z-wwr-blue.jpg" alt="Wild River Rafting logo">
+        </a>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
-            <a href="trips.html">Trips</a>
+            <a href="trips.html" aria-current="page">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
-        <div class="hero">
-            <img src="images/rafting14_1024.jpg" alt="People enjoying a white water rafting trip">
-            <h1>Our Rafting Trips</h1>
-
-            <article>
-                <img src="images/rafting65_600.jpg" alt="Guests enjoying a rafting adventure">
-                <p>
-                    Discover the excitement of white water rafting with Wild River Rafting.
-                    Whether you are looking for an exciting adventure or a memorable
-                    outdoor experience, we are ready to help you enjoy the river.
-                </p>
-            </article>
-        </div>
-
-        <section>
-            <h2>Choose Your Adventure</h2>
-
-            <h3>Family River Adventure</h3>
-            <p>
-                Enjoy a river experience with friends and family. Work together,
-                appreciate the scenery, and create lasting memories on the water.
-            </p>
-
-            <h3>White Water Adventure</h3>
-            <p>
-                Experience the excitement of navigating moving water while
-                practicing teamwork and following your rafting guide's instructions.
-            </p>
-
-            <h3>Scenic River Experience</h3>
-            <p>
-                Enjoy the natural beauty of the river and the surrounding landscape
-                during an outdoor adventure.
-            </p>
+        <section class="trips-hero">
+            <img src="images/rafting14_1024.jpg" alt="Guests enjoying a white water rafting trip">
+            <div class="trips-hero-content">
+                <h1>Choose Your River Adventure</h1>
+                <p>Explore the outdoors, work as a team, and make memories on the water.</p>
+                <a class="button-link" href="contact.html">Contact Us to Plan a Trip</a>
+            </div>
         </section>
 
-        <section>
-            <h2>Ready for Your Next Adventure?</h2>
-            <p>
-                Contact us to ask questions and learn more about planning your trip.
-            </p>
-            <p>
-                <a href="contact.html">Contact Wild River Rafting</a>
-            </p>
+        <section class="trip-grid" aria-label="Featured rafting trips">
+            <article class="trip-card">
+                <img src="images/rafting65_600.jpg" alt="Group enjoying a rafting trip" loading="lazy">
+                <div class="trip-card-content">
+                    <h2>Family River Adventure</h2>
+                    <p>Enjoy the river with friends and family. Work together, appreciate the scenery, and create lasting memories.</p>
+                    <p><strong>Suggested for:</strong> Families and first-time visitors.</p>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <img src="images/imagen2.png" alt="Rafting team member wearing a helmet and river gear" loading="lazy">
+                <div class="trip-card-content">
+                    <h2>White Water Adventure</h2>
+                    <p>Experience moving water while practicing teamwork and following your guide's instructions throughout the outing.</p>
+                    <p><strong>Suggested for:</strong> Adventure seekers.</p>
+                </div>
+            </article>
+
+            <article class="trip-card">
+                <img src="images/imagen3.png" alt="River guide holding a paddle and wearing rafting equipment" loading="lazy">
+                <div class="trip-card-content">
+                    <h2>Scenic River Experience</h2>
+                    <p>Enjoy the river landscape and surrounding nature during an outdoor adventure focused on scenery and shared experiences.</p>
+                    <p><strong>Suggested for:</strong> Nature enthusiasts.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="trip-table-section">
+            <h2>Trip Summary</h2>
+            <p>Contact us to confirm availability, duration, difficulty, and details before booking.</p>
+            <div class="table-scroll">
+                <table>
+                    <caption>Wild River Rafting trip options</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Trip</th>
+                            <th scope="col">Experience</th>
+                            <th scope="col">Suggested for</th>
+                            <th scope="col">Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Family River Adventure</th>
+                            <td>River outing and teamwork</td>
+                            <td>Families and beginners</td>
+                            <td>Contact us for current details</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">White Water Adventure</th>
+                            <td>Active white water experience</td>
+                            <td>Adventure seekers</td>
+                            <td>Contact us for current details</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Scenic River Experience</th>
+                            <td>Outdoor scenery and river experience</td>
+                            <td>Nature enthusiasts</td>
+                            <td>Contact us for current details</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="trips-cta">
+            <h2>Have Questions About a Trip?</h2>
+            <p>Contact our team for information about planning your rafting experience.</p>
+            <a class="button-link" href="contact.html">Contact Wild River Rafting</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Wild River Rafting | JOSE ISMAEL FLORES VILLEGAS</p>
-
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook">
-            </a>
-
-            <a href="https://linkedin.com">
-                <img src="images/linkedin.svg" alt="LinkedIn">
-            </a>
-
-            <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram">
-            </a>
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.svg" alt=""></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt=""></a>
+            <a href="https://instagram.com" aria-label="Instagram"><img src="images/instagram.svg" alt=""></a>
         </nav>
     </footer>
-
 </body>
-
 </html>
-```
