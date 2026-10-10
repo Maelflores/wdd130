@@ -1,3 +1,4 @@
+
 :root {
     --primary-color: #055a05;
     --secondary-color: #f4a261;
@@ -16,12 +17,14 @@
 body {
     font-family: var(--body-font);
     color: var(--accent1-color);
+    line-height: 1.5;
 }
 
 header,
 main,
 footer {
     width: 840px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -50,16 +53,18 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover,
+nav a:focus-visible {
+    text-decoration: underline;
+}
+
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-nav,
-p,
-section,
-article {
+p {
     margin: 16px;
     padding: 8px;
 }
@@ -81,7 +86,7 @@ article {
     padding: 16px;
     text-align: center;
     background-color: var(--accent1-color);
-    color: white;
+    color: #ffffff;
     opacity: 0.8;
 }
 
@@ -98,10 +103,13 @@ article {
 .hero article img {
     float: right;
     width: 125px;
+    max-width: 40%;
+    height: auto;
     margin: 0 0 10px 10px;
 }
 
 section {
+    margin: 16px;
     padding: 20px;
 }
 
@@ -114,7 +122,7 @@ footer {
     align-items: center;
     justify-content: space-between;
     background-color: var(--primary-color);
-    color: white;
+    color: #ffffff;
     padding: 10px 20px;
 }
 
@@ -135,6 +143,216 @@ footer p {
 }
 
 .socialmedia img {
+    display: block;
     width: 32px;
     height: 32px;
+}
+
+.contact-page {
+    width: 840px;
+    max-width: 100%;
+}
+
+.contact-page > h1 {
+    text-align: center;
+    margin: 24px 16px;
+}
+
+.company-contact {
+    text-align: center;
+}
+
+.company-contact address {
+    font-style: normal;
+}
+
+.company-contact p {
+    margin: 8px;
+    padding: 4px;
+}
+
+.company-contact a {
+    color: #264653;
+    overflow-wrap: anywhere;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+.contact-layout section {
+    min-width: 0;
+    margin: 8px;
+    padding: 16px;
+}
+
+.contact-layout h2,
+.employee-section h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.map-section iframe {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.contact-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form-section fieldset {
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #53656c;
+}
+
+.contact-form-section legend {
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.contact-form-section label:not(.choice) {
+    display: block;
+    margin: 8px 0 4px;
+    font-weight: bold;
+}
+
+.contact-form-section input[type="text"],
+.contact-form-section input[type="email"],
+.contact-form-section textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #53656c;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #17313b;
+    font: inherit;
+}
+
+.contact-form-section textarea {
+    resize: vertical;
+}
+
+.contact-form-section .choice {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.contact-form-section .choice input {
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.contact-form-section input:focus-visible,
+.contact-form-section textarea:focus-visible,
+.contact-form-section button:focus-visible {
+    outline: 3px solid #264653;
+    outline-offset: 2px;
+}
+
+.contact-form-section button {
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #055a05;
+    color: #ffffff;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-form-section button:hover {
+    background-color: #034003;
+}
+
+.employee-section {
+    margin: 16px;
+    padding: 16px;
+    border: 1px solid #264653;
+    background-color: #f4f6f6;
+}
+
+.employee-profiles,
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+}
+
+.employee-profiles figure,
+.team-members figure {
+    min-width: 0;
+    margin: 0;
+    padding: 8px;
+    text-align: center;
+}
+
+.employee-profiles img,
+.team-members img,
+.employee-section img {
+    display: block;
+    width: 150px !important;
+    height: 150px !important;
+    max-width: 150px !important;
+    object-fit: cover;
+    object-position: center top;
+    margin: 0 auto 12px;
+}
+
+.employee-profiles figcaption,
+.team-members figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+}
+
+@media screen and (max-width: 840px) {
+    header,
+    main,
+    footer {
+        width: 100%;
+    }
+
+    .contact-layout {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .employee-profiles,
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
 }
