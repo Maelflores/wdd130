@@ -1,6 +1,6 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,71 +9,122 @@
     <title>About Us | Wild River Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
-
 <body>
-
     <header>
-        <img src="images/z-wwr-blue.jpg" alt="Wild River Rafting logo">
+        <a class="logo-link" href="index.html">
+            <img src="images/z-wwr-blue.jpg" alt="Wild River Rafting logo">
+        </a>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
+            <a href="about.html" aria-current="page">About Us</a>
             <a href="trips.html">Trips</a>
             <a href="contact.html">Contact Us</a>
         </nav>
     </header>
 
     <main>
-
         <div class="hero">
-            <img src="images/rafting14_1024.jpg" alt="People enjoying a white water rafting adventure">
+            <img src="images/rafting14_1024.jpg"
+                 alt="People enjoying a white water rafting adventure">
 
             <h1>Wild River Rafting</h1>
 
             <article>
-                <img src="images/rafting65_600.jpg" alt="Happy rafting client">
+                <img src="images/rafting65_600.jpg"
+                     alt="Rafters enjoying a river adventure">
+
                 <p>
                     Our mission is to provide exciting white water rafting
                     adventures while helping our guests enjoy the river,
                     discover new places, and create lasting memories.
+                    We believe that teamwork, safety, and respect for nature
+                    make every trip more meaningful.
                 </p>
             </article>
         </div>
 
-        <section>
+        <section class="history-section">
             <h2>History</h2>
-            <p>
-                Wild River Rafting began with a simple goal: to help people
-                experience the excitement of the river. Our company continues
-                to bring people together through adventure, teamwork, and
-                memorable experiences on the water.
-            </p>
+
+            <div class="history-content">
+                <p>
+                    Wild River Rafting began with a simple goal: to help people
+                    experience the excitement of the river. What started as a
+                    love for outdoor adventure grew into a way to bring people
+                    together through teamwork and exploration.
+                </p>
+
+                <img src="images/rafting65_600.jpg"
+                     alt="A rafting team working together on the river">
+
+                <p>
+                    Today, we continue to share memorable experiences on the
+                    water. Our trips encourage guests to challenge themselves,
+                    appreciate the natural environment, and create lasting
+                    memories with friends and family.
+                </p>
+            </div>
         </section>
 
-        <section>
+        <section class="adventures-section">
             <h2>Adventure Awaits You!</h2>
-        </section>
 
+            <div class="adventures-gallery">
+                <figure>
+                    <img src="images/los-dientes-del-diablo.jpg"
+                         alt="A blue raft navigating powerful whitewater rapids"
+                         loading="lazy">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/big-mallard.jpg"
+                         alt="A rafting team paddling through river rapids"
+                         loading="lazy">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/half-day-adventure.jpg"
+                         alt="A rafting boat on a scenic mountain river"
+                         loading="lazy">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/constrictor-rapid.jpg"
+                         alt="Rafters working together through foaming rapids"
+                         loading="lazy">
+                    <figcaption>Constrictor Rapid</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/sunset-float.jpg"
+                         alt="A rafting group enjoying a peaceful river at sunset"
+                         loading="lazy">
+                    <figcaption>Sunset Float</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2026 Wild River Rafting | JOSE ISMAEL FLORES VILLEGAS</p>
 
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.svg" alt="Facebook">
+        <nav class="socialmedia" aria-label="Social media">
+            <a href="https://facebook.com" aria-label="Facebook">
+                <img src="images/facebook.svg" alt="">
             </a>
 
-            <a href="https://linkedin.com">
-                <img src="images/linkedin.svg" alt="LinkedIn">
+            <a href="https://linkedin.com" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" alt="">
             </a>
 
-            <a href="https://instagram.com">
-                <img src="images/instagram.svg" alt="Instagram">
+            <a href="https://instagram.com" aria-label="Instagram">
+                <img src="images/instagram.svg" alt="">
             </a>
         </nav>
     </footer>
-
 </body>
-
 </html>
